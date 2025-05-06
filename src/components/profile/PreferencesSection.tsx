@@ -13,11 +13,15 @@ export function PreferencesSection({ profile }: PreferencesSectionProps) {
         <CardTitle>Life Details</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {profile.preferences.map((preference, index) => (
-            <div key={index} className="text-center p-3 bg-muted/50 rounded-lg hover:bg-muted transition-colors">
+            <div 
+              key={index} 
+              className="text-left p-3 bg-muted/50 rounded-lg hover:bg-muted transition-colors animate-fade-in"
+              style={{ animationDelay: `${index * 0.05}s` }}
+            >
               <div className="text-sm text-muted-foreground">{preference.label}</div>
-              <div className="font-medium mt-1">{preference.value}</div>
+              <div className="font-medium mt-1">{preference.value || "Not specified"}</div>
             </div>
           ))}
         </div>
