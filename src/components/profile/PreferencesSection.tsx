@@ -15,7 +15,7 @@ export function PreferencesSection({ profile }: PreferencesSectionProps) {
       <CardContent>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {profile.preferences.map((preference, index) => (
-            <div key={index} className="text-center p-3 bg-muted rounded-lg">
+            <div key={index} className="text-center p-3 bg-muted/50 rounded-lg hover:bg-muted transition-colors">
               <div className="text-sm text-muted-foreground">{preference.label}</div>
               <div className="font-medium mt-1">{preference.value}</div>
             </div>
