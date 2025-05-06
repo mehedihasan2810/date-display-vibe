@@ -192,7 +192,7 @@ const EditProfile = () => {
                           <FormItem>
                             <FormLabel>Height</FormLabel>
                             <FormControl>
-                              <Input placeholder="e.g. 5'7\"" {...field} />
+                              <Input placeholder='e.g. 5\'7"' {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
