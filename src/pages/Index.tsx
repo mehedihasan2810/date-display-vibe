@@ -1,5 +1,12 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { AboutSection } from "@/components/profile/AboutSection";
+import { PhotoGallery } from "@/components/profile/PhotoGallery";
+import { InterestsSection } from "@/components/profile/InterestsSection";
+import { PreferencesSection } from "@/components/profile/PreferencesSection";
+import { ProfileActions } from "@/components/profile/ProfileActions";
+import { profileData } from "@/data/profileData";
 
 const Index = () => {
   return (
