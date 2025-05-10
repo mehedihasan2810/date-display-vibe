@@ -1,48 +1,35 @@
 
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Heart, MessageCircle, X } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Heart, MessageCircle, LogIn, UserPlus } from "lucide-react";
 
-export function ProfileActions() {
-  const { toast } = useToast();
-  
-  const handleLike = () => {
-    toast({
-      title: "Liked!",
-      description: "You liked this profile",
-    });
-  };
-  
-  const handlePass = () => {
-    toast({
-      title: "Passed",
-      description: "You passed on this profile",
-      variant: "destructive",
-    });
-  };
-  
-  const handleMessage = () => {
-    toast({
-      title: "Message Sent",
-      description: "Your message has been sent",
-    });
-  };
-  
+export const ProfileActions = () => {
   return (
-    <div className="fixed bottom-6 left-0 right-0 flex justify-center gap-4 z-10">
-      <div className="bg-background/80 backdrop-blur-md p-3 rounded-full shadow-lg flex items-center gap-3">
-        <Button variant="outline" size="icon" className="rounded-full h-12 w-12" onClick={handlePass}>
-          <X className="h-6 w-6 text-destructive" />
+    <div className="fixed bottom-0 left-0 right-0 bg-background/80 backdrop-blur-md border-t p-3 flex items-center justify-center gap-3 z-50">
+      <Button size="lg" className="flex-1 max-w-40">
+        <Heart className="mr-2" />
+        Like
+      </Button>
+      
+      <Button size="lg" variant="secondary" className="flex-1 max-w-40">
+        <MessageCircle className="mr-2" />
+        Message
+      </Button>
+
+      <div className="fixed bottom-20 right-6 flex flex-col gap-2">
+        <Button variant="outline" size="sm" className="rounded-full" asChild>
+          <Link to="/signin">
+            <LogIn className="mr-2" size={16} />
+            Sign In
+          </Link>
         </Button>
-        
-        <Button size="icon" className="rounded-full h-16 w-16 bg-primary hover:bg-primary/90" onClick={handleLike}>
-          <Heart className="h-8 w-8" />
-        </Button>
-        
-        <Button variant="outline" size="icon" className="rounded-full h-12 w-12" onClick={handleMessage}>
-          <MessageCircle className="h-6 w-6 text-primary" />
+        <Button variant="outline" size="sm" className="rounded-full" asChild>
+          <Link to="/signup">
+            <UserPlus className="mr-2" size={16} />
+            Sign Up
+          </Link>
         </Button>
       </div>
     </div>
   );
-}
+};
