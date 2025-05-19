@@ -11,9 +11,11 @@ export const ProfileActions = () => {
         Like
       </Button>
       
-      <Button size="lg" variant="secondary" className="flex-1 max-w-40">
-        <MessageCircle className="mr-2" />
-        Message
+      <Button size="lg" variant="secondary" className="flex-1 max-w-40" asChild>
+        <Link to="/messages">
+          <MessageCircle className="mr-2" />
+          Message
+        </Link>
       </Button>
 
       <div className="fixed bottom-20 right-6 flex flex-col gap-2">
