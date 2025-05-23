@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Heart, MessageCircle, LogIn, UserPlus, BarChart3 } from "lucide-react";
+import { Heart, MessageCircle, LogIn, UserPlus } from "lucide-react";
 
 export const ProfileActions = () => {
   return (
@@ -19,12 +19,6 @@ export const ProfileActions = () => {
       </Button>
 
       <div className="fixed bottom-20 right-6 flex flex-col gap-2">
-        <Button variant="outline" size="sm" className="rounded-full" asChild>
-          <Link to="/dashboard">
-            <BarChart3 className="mr-2" size={16} />
-            Dashboard
-          </Link>
-        </Button>
         <Button variant="outline" size="sm" className="rounded-full" asChild>
           <Link to="/signin">
             <LogIn className="mr-2" size={16} />
