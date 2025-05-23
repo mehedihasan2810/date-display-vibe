@@ -9,7 +9,6 @@ import Search from "./pages/Search";
 import EditProfile from "./pages/EditProfile";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import Messages from "./pages/Messages";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,7 +25,6 @@ const App = () => (
           <Route path="/edit-profile" element={<EditProfile />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/messages" element={<Messages />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
